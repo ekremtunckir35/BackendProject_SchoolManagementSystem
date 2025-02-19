@@ -11,8 +11,9 @@ import java.util.Optional;
 @Repository
 public interface UserRoleRepository extends JpaRepository<UserRole, Long> {
 
-    @Query("SELECT ur FROM UserRole ur WHERE ur.roleName = ?1")
-    Optional<UserRole> findUserRoleByRoleName(RoleType roleType);
-
+    @Query("SELECT r FROM UserRole r WHERE r.roleType = ?1")
     Optional<UserRole> findByUserRoleType(RoleType roleType);
+
+
+    Long id(Long id);
 }

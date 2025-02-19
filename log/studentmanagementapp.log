@@ -1,179 +1,979 @@
-"2025-02-18 00:17:43,824 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 8748 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
-""2025-02-18 00:17:43,825 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
-""2025-02-18 00:17:43,849 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2025-02-18 00:17:43,850 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2025-02-18 00:17:44,119 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2025-02-18 00:17:44,125 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
-""2025-02-18 00:17:44,530 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
-""2025-02-18 00:17:44,531 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-""2025-02-18 00:17:44,531 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-""2025-02-18 00:17:44,531 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-""2025-02-18 00:17:44,533 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-""2025-02-18 00:17:44,538 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2025-02-18 00:17:44,538 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2025-02-18 00:17:44,579 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2025-02-18 00:17:44,579 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 728 ms
-""2025-02-18 00:17:44,657 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2025-02-18 00:17:44,686 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-""2025-02-18 00:17:44,767 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2025-02-18 00:17:44,808 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-""2025-02-18 00:17:44,939 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-""2025-02-18 00:17:44,946 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2025-02-18 00:17:45,032 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2025-02-18 00:17:45,035 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:17:45,191 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+"2025-02-19 00:00:07,148 INFO  [http-nio-8090-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 00:00:46,128 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 00:00:46,129 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 00:00:46,131 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 00:01:07,705 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 37844 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 00:01:07,707 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 00:01:07,732 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 00:01:07,732 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 00:01:08,004 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 00:01:08,032 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+""2025-02-19 00:01:08,287 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
+""2025-02-19 00:01:08,287 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 00:01:08,287 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 00:01:08,287 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 00:01:08,290 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 00:01:08,294 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 00:01:08,294 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 00:01:08,326 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 00:01:08,327 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 595 ms
+""2025-02-19 00:01:08,389 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 00:01:08,407 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 00:01:08,464 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 00:01:08,505 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 00:01:08,596 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 00:01:08,604 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 00:01:09,008 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 00:01:09,011 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 00:01:09,360 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
 
-Using generated security password: 12bd180a-84ac-42d3-b479-6655f6256cd5
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-""2025-02-18 00:17:45,241 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f04b59e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@427035c, org.springframework.security.web.context.SecurityContextPersistenceFilter@15b5ed55, org.springframework.security.web.header.HeaderWriterFilter@781909ca, org.springframework.security.web.csrf.CsrfFilter@3882dc00, org.springframework.security.web.authentication.logout.LogoutFilter@2be1a2ba, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5060504, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1a341e96, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@725958aa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c16ebc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7189f13f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ce65f79, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ffd035d, org.springframework.security.web.session.SessionManagementFilter@7d4f8f68, org.springframework.security.web.access.ExceptionTranslationFilter@53fcf8ad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ff88978]
-""2025-02-18 00:17:45,263 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-""2025-02-18 00:17:45,287 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
-""2025-02-18 00:17:45,293 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.651 seconds (JVM running for 1.928)
-""2025-02-18 00:18:10,606 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:18:10,607 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-""2025-02-18 00:18:10,610 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-""2025-02-18 00:36:16,647 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 30060 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
-""2025-02-18 00:36:16,647 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
-""2025-02-18 00:36:16,669 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2025-02-18 00:36:16,669 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2025-02-18 00:36:16,985 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2025-02-18 00:36:17,002 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
-""2025-02-18 00:36:17,395 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
-""2025-02-18 00:36:17,396 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-""2025-02-18 00:36:17,396 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-""2025-02-18 00:36:17,396 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-""2025-02-18 00:36:17,398 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-""2025-02-18 00:36:17,403 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2025-02-18 00:36:17,403 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2025-02-18 00:36:17,447 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2025-02-18 00:36:17,447 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 777 ms
-""2025-02-18 00:36:17,512 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2025-02-18 00:36:17,529 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-""2025-02-18 00:36:17,586 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2025-02-18 00:36:17,625 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-""2025-02-18 00:36:17,724 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-""2025-02-18 00:36:17,734 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2025-02-18 00:36:18,133 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2025-02-18 00:36:18,137 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:36:18,349 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
-
-Using generated security password: 6aaea869-d12e-4833-8341-5992e85dfcbf
+Using generated security password: c86fdaea-66ad-48e6-80a4-bcdff342de61
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-""2025-02-18 00:36:18,422 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fb590c8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67354f5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c5c64, org.springframework.security.web.header.HeaderWriterFilter@3ea10acc, org.springframework.security.web.csrf.CsrfFilter@62b45760, org.springframework.security.web.authentication.logout.LogoutFilter@383281b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3db665ef, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75521460, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@59e1dd8d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58dc1c9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f119b90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ec7f958, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@372768e4, org.springframework.security.web.session.SessionManagementFilter@19bfb33b, org.springframework.security.web.access.ExceptionTranslationFilter@64c65a25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41dfceac]
-""2025-02-18 00:36:18,445 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-""2025-02-18 00:36:18,462 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
-""2025-02-18 00:36:18,468 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 2.004 seconds (JVM running for 2.275)
-""2025-02-18 00:36:29,027 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 21 class path changes (0 additions, 20 deletions, 1 modification)
-""2025-02-18 00:36:29,037 INFO  [Thread-5] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
-""2025-02-18 00:36:29,041 INFO  [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:36:29,043 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-""2025-02-18 00:36:29,044 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
-""2025-02-18 00:36:29,106 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 30060 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
-""2025-02-18 00:36:29,106 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
-""2025-02-18 00:36:29,171 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2025-02-18 00:36:29,172 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-""2025-02-18 00:36:29,208 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
-""2025-02-18 00:36:29,208 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-""2025-02-18 00:36:29,208 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-""2025-02-18 00:36:29,208 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-""2025-02-18 00:36:29,209 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-""2025-02-18 00:36:29,209 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2025-02-18 00:36:29,209 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2025-02-18 00:36:29,217 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2025-02-18 00:36:29,217 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 110 ms
-""2025-02-18 00:36:29,233 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2025-02-18 00:36:29,235 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Starting...
-""2025-02-18 00:36:29,276 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Start completed.
-""2025-02-18 00:36:29,276 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2025-02-18 00:36:29,288 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2025-02-18 00:36:29,289 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:36:29,327 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+""2025-02-19 00:01:09,410 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1ad6880, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c0c9e99, org.springframework.security.web.context.SecurityContextPersistenceFilter@3099cb8b, org.springframework.security.web.header.HeaderWriterFilter@75ab5c4a, org.springframework.security.web.csrf.CsrfFilter@7b9eaf78, org.springframework.security.web.authentication.logout.LogoutFilter@786c8a33, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51470f90, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@62069692, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@e6873cc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@d1c1a06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17cae95d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54ca7a22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1db19815, org.springframework.security.web.session.SessionManagementFilter@f4ece53, org.springframework.security.web.access.ExceptionTranslationFilter@7697b834, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b1a138d]
+""2025-02-19 00:01:09,434 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 00:01:09,451 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
+""2025-02-19 00:01:09,457 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.946 seconds (JVM running for 2.231)
+""2025-02-19 00:01:20,180 INFO  [http-nio-8090-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 00:06:53,488 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 00:06:53,490 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 00:06:53,491 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 00:38:22,742 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 5052 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 00:38:22,742 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 00:38:22,772 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 00:38:22,772 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 00:38:23,076 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 00:38:23,103 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+""2025-02-19 00:38:23,401 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
+""2025-02-19 00:38:23,401 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 00:38:23,402 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 00:38:23,402 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 00:38:23,404 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 00:38:23,407 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 00:38:23,407 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 00:38:23,443 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 00:38:23,444 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 671 ms
+""2025-02-19 00:38:23,513 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 00:38:23,532 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 00:38:23,593 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 00:38:23,642 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 00:38:23,740 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 00:38:23,750 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 00:38:24,172 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 00:38:24,177 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 00:38:24,561 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
 
-Using generated security password: 0a9d375a-ae27-4ace-823d-92cc77bfd95e
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-""2025-02-18 00:36:29,331 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e7aae60, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60551972, org.springframework.security.web.context.SecurityContextPersistenceFilter@783eff45, org.springframework.security.web.header.HeaderWriterFilter@426166cc, org.springframework.security.web.csrf.CsrfFilter@3f7b169, org.springframework.security.web.authentication.logout.LogoutFilter@15d514ec, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d767b98, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@25395812, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3ea1045b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@252dc728, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@496eced3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f08634, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@757e9020, org.springframework.security.web.session.SessionManagementFilter@46fc620a, org.springframework.security.web.access.ExceptionTranslationFilter@6c9baf4e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b7aaf62]
-""2025-02-18 00:36:29,335 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-""2025-02-18 00:36:29,340 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
-""2025-02-18 00:36:29,342 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 0.249 seconds (JVM running for 13.149)
-""2025-02-18 00:36:29,343 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
-""2025-02-18 00:36:30,758 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 20 class path changes (20 additions, 0 deletions, 0 modifications)
-""2025-02-18 00:36:30,765 INFO  [Thread-7] org.apache.catalina.core.StandardService:Stopping service [Tomcat]
-""2025-02-18 00:36:30,766 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:36:30,767 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown initiated...
-""2025-02-18 00:36:30,768 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown completed.
-""2025-02-18 00:36:30,817 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 30060 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
-""2025-02-18 00:36:30,818 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
-""2025-02-18 00:36:30,866 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2025-02-18 00:36:30,867 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
-""2025-02-18 00:36:30,896 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
-""2025-02-18 00:36:30,896 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-""2025-02-18 00:36:30,896 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-""2025-02-18 00:36:30,896 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-""2025-02-18 00:36:30,896 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-""2025-02-18 00:36:30,897 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2025-02-18 00:36:30,897 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2025-02-18 00:36:30,904 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2025-02-18 00:36:30,905 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 87 ms
-""2025-02-18 00:36:30,918 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2025-02-18 00:36:30,920 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Starting...
-""2025-02-18 00:36:30,962 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Start completed.
-""2025-02-18 00:36:30,962 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2025-02-18 00:36:31,077 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2025-02-18 00:36:31,077 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:36:31,115 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
-
-Using generated security password: d640960c-8596-466c-8c16-a67510e879d2
+Using generated security password: ebf42b53-5564-46e4-9338-3cf856d4af08
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-""2025-02-18 00:36:31,118 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b413bb8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ccf33c0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d906d9c, org.springframework.security.web.header.HeaderWriterFilter@3b5c87d3, org.springframework.security.web.csrf.CsrfFilter@67d670a6, org.springframework.security.web.authentication.logout.LogoutFilter@2dc0c303, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40e91cd7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@65e13e0d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@54c8832a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6fd379bc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4883c2d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17bea605, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20a21e96, org.springframework.security.web.session.SessionManagementFilter@49176758, org.springframework.security.web.access.ExceptionTranslationFilter@41d2829d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69ddca8a]
-""2025-02-18 00:36:31,121 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-""2025-02-18 00:36:31,126 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
-""2025-02-18 00:36:31,127 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 0.318 seconds (JVM running for 14.934)
-""2025-02-18 00:36:31,128 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
-""2025-02-18 00:39:44,863 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 00:39:44,864 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown initiated...
-""2025-02-18 00:39:44,865 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown completed.
-""2025-02-18 14:56:14,403 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 17452 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
-""2025-02-18 14:56:14,405 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
-""2025-02-18 14:56:14,434 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-""2025-02-18 14:56:14,434 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-""2025-02-18 14:56:14,766 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-""2025-02-18 14:56:14,774 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-""2025-02-18 14:56:15,106 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
-""2025-02-18 14:56:15,107 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
-""2025-02-18 14:56:15,107 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-""2025-02-18 14:56:15,107 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-""2025-02-18 14:56:15,122 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
-""2025-02-18 14:56:15,128 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
-""2025-02-18 14:56:15,128 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
-""2025-02-18 14:56:15,169 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
-""2025-02-18 14:56:15,170 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 736 ms
-""2025-02-18 14:56:15,239 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
-""2025-02-18 14:56:15,272 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
-""2025-02-18 14:56:15,364 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-""2025-02-18 14:56:15,423 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
-""2025-02-18 14:56:15,531 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
-""2025-02-18 14:56:15,541 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
-""2025-02-18 14:56:16,002 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-""2025-02-18 14:56:16,006 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 14:56:16,192 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+""2025-02-19 00:38:24,613 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7df4b5ae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd9dbcb, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d95063c, org.springframework.security.web.header.HeaderWriterFilter@7b617c01, org.springframework.security.web.csrf.CsrfFilter@4bce606f, org.springframework.security.web.authentication.logout.LogoutFilter@1ad59138, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c9b368e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@11d90a8e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@28b718af, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b614da6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@272c49c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ea62d19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f89ffe1, org.springframework.security.web.session.SessionManagementFilter@1445111e, org.springframework.security.web.access.ExceptionTranslationFilter@4e513fd7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4977d2e]
+""2025-02-19 00:38:24,638 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 00:38:24,657 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
+""2025-02-19 00:38:24,663 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 2.139 seconds (JVM running for 2.471)
+""2025-02-19 00:40:18,970 INFO  [http-nio-8090-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 01:07:28,824 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:07:28,827 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 01:07:28,828 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 01:15:29,332 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 31184 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 01:15:29,333 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 01:15:29,357 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 01:15:29,358 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 01:15:29,630 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 01:15:29,658 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+""2025-02-19 01:15:29,915 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
+""2025-02-19 01:15:29,915 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 01:15:29,915 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 01:15:29,915 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 01:15:29,918 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 01:15:29,922 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 01:15:29,923 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 01:15:29,954 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 01:15:29,954 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 596 ms
+""2025-02-19 01:15:30,020 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 01:15:30,037 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 01:15:30,093 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 01:15:30,140 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 01:15:30,237 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 01:15:30,244 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 01:15:30,646 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 01:15:30,651 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:15:30,997 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
 
-Using generated security password: 73478b97-d415-4859-ae39-dedf239cff47
+Using generated security password: aaa264b6-3618-4877-affd-eeef906b1f65
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-""2025-02-18 14:56:16,251 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a0e00c5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24b5504c, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b349cd6, org.springframework.security.web.header.HeaderWriterFilter@126e0a60, org.springframework.security.web.csrf.CsrfFilter@40f2fae8, org.springframework.security.web.authentication.logout.LogoutFilter@3969cfa8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@fdb8790, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@66891348, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@477244d3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57373c54, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34f62af9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f0354bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43875afb, org.springframework.security.web.session.SessionManagementFilter@40dbf45f, org.springframework.security.web.access.ExceptionTranslationFilter@14385722, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2abd7800]
-""2025-02-18 14:56:16,272 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
-""2025-02-18 14:56:16,292 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
-""2025-02-18 14:56:16,298 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 2.101 seconds (JVM running for 2.484)
-""2025-02-18 14:57:29,422 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
-""2025-02-18 14:57:29,426 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
-""2025-02-18 14:57:29,430 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 01:15:31,043 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cd5e38a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@388e6b6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f77e904, org.springframework.security.web.header.HeaderWriterFilter@1dd1ef2f, org.springframework.security.web.csrf.CsrfFilter@26354368, org.springframework.security.web.authentication.logout.LogoutFilter@5796aff4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@59847597, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4d1aae6b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7d314b24, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5d664a8c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79692cba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72c0a83e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e84f280, org.springframework.security.web.session.SessionManagementFilter@a9c713, org.springframework.security.web.access.ExceptionTranslationFilter@1e67c940, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17661a50]
+""2025-02-19 01:15:31,068 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 01:15:31,086 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
+""2025-02-19 01:15:31,093 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.939 seconds (JVM running for 2.22)
+""2025-02-19 01:15:40,783 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:15:40,785 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 01:15:40,787 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 01:18:44,278 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 36000 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 01:18:44,280 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 01:18:44,309 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 01:18:44,309 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 01:18:44,610 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 01:18:44,637 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+""2025-02-19 01:18:44,907 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 01:18:44,907 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 01:18:44,907 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 01:18:44,907 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 01:18:44,911 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 01:18:44,915 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 01:18:44,915 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 01:18:44,948 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 01:18:44,949 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 640 ms
+""2025-02-19 01:18:45,017 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 01:18:45,035 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 01:18:45,093 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 01:18:45,140 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 01:18:45,233 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 01:18:45,240 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 01:18:45,652 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 01:18:45,657 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:18:46,000 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: c1425f5a-1a89-4536-b8da-53360d3344e1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+""2025-02-19 01:18:46,043 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4426884e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7deda947, org.springframework.security.web.context.SecurityContextPersistenceFilter@786668a3, org.springframework.security.web.header.HeaderWriterFilter@27d8c166, org.springframework.security.web.csrf.CsrfFilter@2aa3181a, org.springframework.security.web.authentication.logout.LogoutFilter@470c023, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74d71e42, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5f8f4b9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@43cd454b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5e2cebd6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b42e4b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60797eea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36a305f1, org.springframework.security.web.session.SessionManagementFilter@2a585f7d, org.springframework.security.web.access.ExceptionTranslationFilter@3dce9e1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61001577]
+""2025-02-19 01:18:46,062 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 01:18:46,079 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 01:18:46,085 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 2.01 seconds (JVM running for 2.312)
+""2025-02-19 01:19:15,207 INFO  [http-nio-8091-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 01:33:44,733 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:33:44,734 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 01:33:44,736 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 01:33:47,826 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 36824 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 01:33:47,826 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 01:33:47,856 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 01:33:47,856 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 01:33:48,134 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 01:33:48,159 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+""2025-02-19 01:33:48,419 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 01:33:48,419 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 01:33:48,419 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 01:33:48,419 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 01:33:48,421 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 01:33:48,425 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 01:33:48,426 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 01:33:48,456 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 01:33:48,456 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 600 ms
+""2025-02-19 01:33:48,521 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 01:33:48,538 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 01:33:48,596 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 01:33:48,642 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 01:33:48,735 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 01:33:48,742 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 01:33:49,146 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 01:33:49,150 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 01:33:49,491 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: 5050391e-6450-4f30-941d-342f23c62817
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+""2025-02-19 01:33:49,539 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7eb2d2e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ff8dbed, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c6532a4, org.springframework.security.web.header.HeaderWriterFilter@2a7e154a, org.springframework.security.web.csrf.CsrfFilter@3e1ab065, org.springframework.security.web.authentication.logout.LogoutFilter@6c489064, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@474f0bb3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2aa3181a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74d71e42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61001577, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d0f2712, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22751f27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fd2987f, org.springframework.security.web.session.SessionManagementFilter@4f53e26e, org.springframework.security.web.access.ExceptionTranslationFilter@1b8107e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b3ebed2]
+""2025-02-19 01:33:49,560 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 01:33:49,577 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 01:33:49,583 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.95 seconds (JVM running for 2.229)
+""2025-02-19 01:33:57,100 INFO  [http-nio-8091-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 11:11:02,745 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 2584 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 11:11:02,746 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 11:11:02,777 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 11:11:02,777 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 11:11:03,146 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 11:11:03,183 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+""2025-02-19 11:11:03,535 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 11:11:03,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 11:11:03,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 11:11:03,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 11:11:03,552 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 11:11:03,558 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 11:11:03,558 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 11:11:03,602 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 11:11:03,602 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 824 ms
+""2025-02-19 11:11:03,685 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 11:11:03,722 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 11:11:03,833 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 11:11:03,898 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 11:11:04,018 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 11:11:04,029 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 11:11:04,537 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 11:11:04,541 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 11:11:04,950 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: 67e6e9ec-c72a-47e8-9950-369705b4a2ee
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+""2025-02-19 11:11:05,008 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5dbd86b8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52f5f92f, org.springframework.security.web.context.SecurityContextPersistenceFilter@228adbca, org.springframework.security.web.header.HeaderWriterFilter@7e2cfb5f, org.springframework.security.web.csrf.CsrfFilter@111ffe09, org.springframework.security.web.authentication.logout.LogoutFilter@424abb9f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58702c26, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@720f648a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6663d951, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@521bbb83, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@778fc4f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24105172, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cbc4599, org.springframework.security.web.session.SessionManagementFilter@6a514d19, org.springframework.security.web.access.ExceptionTranslationFilter@5107bc37, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cc43808]
+""2025-02-19 11:11:05,034 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 11:11:05,053 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 11:11:05,060 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 2.543 seconds (JVM running for 2.964)
+""2025-02-19 11:15:13,180 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 11:15:13,182 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 11:15:13,185 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 17:18:23,613 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 38884 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 17:18:23,614 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 17:18:23,639 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 17:18:23,639 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 17:18:23,939 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 17:18:23,966 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+""2025-02-19 17:18:24,229 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 17:18:24,229 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 17:18:24,229 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 17:18:24,229 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 17:18:24,232 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 17:18:24,236 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 17:18:24,237 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 17:18:24,270 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 17:18:24,270 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 631 ms
+""2025-02-19 17:18:24,335 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 17:18:24,352 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 17:18:24,408 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 17:18:24,451 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 17:18:24,543 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 17:18:24,550 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 17:18:24,951 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 17:18:24,954 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 17:18:25,303 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: 0539a051-ba10-4d46-b38b-ccb329e1bffe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+""2025-02-19 17:18:25,347 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@59eb3f7a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36ecf792, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cb3c4d3, org.springframework.security.web.header.HeaderWriterFilter@65e50062, org.springframework.security.web.csrf.CsrfFilter@75ab5c4a, org.springframework.security.web.authentication.logout.LogoutFilter@7552edbb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@32795055, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@60d7d76f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2fa444e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7133cb6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@394208fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@394daf86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b8e571f, org.springframework.security.web.session.SessionManagementFilter@163a3c50, org.springframework.security.web.access.ExceptionTranslationFilter@3a601f8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c0c9e99]
+""2025-02-19 17:18:25,368 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 17:18:25,386 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 17:18:25,392 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.975 seconds (JVM running for 2.275)
+""2025-02-19 17:20:32,454 INFO  [http-nio-8091-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 17:22:27,920 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 17:22:27,922 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 17:22:27,924 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 17:22:33,965 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 35348 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 17:22:33,966 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 17:22:33,990 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 17:22:33,990 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 17:22:34,275 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 17:22:34,301 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+""2025-02-19 17:22:34,567 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 17:22:34,568 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 17:22:34,568 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 17:22:34,568 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 17:22:34,571 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 17:22:34,574 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 17:22:34,575 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 17:22:34,603 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 17:22:34,603 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 612 ms
+""2025-02-19 17:22:34,664 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 17:22:34,680 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 17:22:34,737 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 17:22:34,787 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 17:22:34,882 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 17:22:34,889 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 17:22:35,299 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 17:22:35,303 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 17:22:35,647 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: cc78b3fa-e55c-4e73-a426-aae9179f99cc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+""2025-02-19 17:22:35,694 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b6f9ab1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fbb5785, org.springframework.security.web.context.SecurityContextPersistenceFilter@9dc7942, org.springframework.security.web.header.HeaderWriterFilter@8d0826d, org.springframework.security.web.csrf.CsrfFilter@29078394, org.springframework.security.web.authentication.logout.LogoutFilter@4ed5632a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2bce197d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a43120d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2bc9ab03, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f22647, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fed7c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46f9037c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@704bac9c, org.springframework.security.web.session.SessionManagementFilter@72d90fdd, org.springframework.security.web.access.ExceptionTranslationFilter@75992b8b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cf77c60]
+""2025-02-19 17:22:35,715 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 17:22:35,732 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 17:22:35,738 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.961 seconds (JVM running for 2.27)
+""2025-02-19 17:22:47,046 INFO  [http-nio-8091-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 17:26:21,597 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 17:26:21,598 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 17:26:21,600 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 18:01:19,875 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 33428 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 18:01:19,876 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 18:01:19,903 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 18:01:19,903 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 18:01:20,185 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 18:01:20,211 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+""2025-02-19 18:01:20,459 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8091 (http)
+""2025-02-19 18:01:20,459 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 18:01:20,459 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 18:01:20,459 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 18:01:20,462 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 18:01:20,466 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 18:01:20,466 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 18:01:20,498 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 18:01:20,498 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 595 ms
+""2025-02-19 18:01:20,561 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 18:01:20,578 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 18:01:20,634 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 18:01:20,668 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 18:01:20,770 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 18:01:20,778 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 18:01:21,170 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 18:01:21,174 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 18:01:21,516 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 18:01:21,533 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8091 (http) with context path ''
+""2025-02-19 18:01:21,539 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.854 seconds (JVM running for 2.148)
+""2025-02-19 18:01:40,959 INFO  [http-nio-8091-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 18:01:41,064 WARN  [http-nio-8091-exec-3] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ekrem.school_management_system.payload.response.business.ResponseMessage<com.ekrem.school_management_system.payload.response.user.UserResponse>> com.ekrem.school_management_system.controller.user.UserController.saveUser(com.ekrem.school_management_system.payload.request.user.UserRequest,java.lang.String): [Field error in object 'userRequest' on field 'ssn': rejected value [111-111-1111]; codes [Pattern.userRequest.ssn,Pattern.ssn,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.ssn,ssn]; arguments []; default message [ssn],[Ljavax.validation.constraints.Pattern$Flag;@1dac154a,^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$]; default message [Please enter valid SSN number]] ]
+""2025-02-19 18:03:07,435 WARN  [http-nio-8091-exec-10] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ekrem.school_management_system.payload.response.business.ResponseMessage<com.ekrem.school_management_system.payload.response.user.UserResponse>> com.ekrem.school_management_system.controller.user.UserController.saveUser(com.ekrem.school_management_system.payload.request.user.UserRequest,java.lang.String): [Field error in object 'userRequest' on field 'ssn': rejected value [111-111-1111]; codes [Pattern.userRequest.ssn,Pattern.ssn,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.ssn,ssn]; arguments []; default message [ssn],[Ljavax.validation.constraints.Pattern$Flag;@1dac154a,^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$]; default message [Please enter valid SSN number]] ]
+""2025-02-19 18:05:06,241 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 18:05:06,242 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 18:05:06,244 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 22:19:28,918 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 21508 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 22:19:28,918 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 22:19:28,944 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 22:19:28,944 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 22:19:29,244 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 22:19:29,270 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+""2025-02-19 22:19:29,536 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
+""2025-02-19 22:19:29,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 22:19:29,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 22:19:29,536 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 22:19:29,539 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 22:19:29,543 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 22:19:29,543 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 22:19:29,575 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 22:19:29,575 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 630 ms
+""2025-02-19 22:19:29,633 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 22:19:29,657 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 22:19:29,713 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 22:19:29,750 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 22:19:29,862 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 22:19:29,871 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 22:19:30,296 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 22:19:30,299 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 22:19:30,678 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 22:19:30,695 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
+""2025-02-19 22:19:30,701 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.97 seconds (JVM running for 2.277)
+""2025-02-19 22:20:13,570 INFO  [http-nio-8090-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2025-02-19 22:20:13,662 WARN  [http-nio-8090-exec-1] org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.ekrem.school_management_system.payload.response.business.ResponseMessage<com.ekrem.school_management_system.payload.response.user.UserResponse>> com.ekrem.school_management_system.controller.user.UserController.saveUser(com.ekrem.school_management_system.payload.request.user.UserRequest,java.lang.String): [Field error in object 'userRequest' on field 'ssn': rejected value [111-111-1111]; codes [Pattern.userRequest.ssn,Pattern.ssn,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.ssn,ssn]; arguments []; default message [ssn],[Ljavax.validation.constraints.Pattern$Flag;@79f132a7,^(?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$]; default message [Please enter valid SSN number]] ]
+""2025-02-19 22:25:58,301 ERROR [http-nio-8090-exec-8] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]] with root cause
+"org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053)
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412)
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524)
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723)
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1066)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1319)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExpr(HqlSqlBaseWalker.java:1906)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1697)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1865)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderClause(HqlSqlBaseWalker.java:1670)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:680)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:177)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy125.findUserByUserRoleQuery(Unknown Source)
+	at com.ekrem.school_management_system.service.user.UserService.getUserByPage(UserService.java:85)
+	at com.ekrem.school_management_system.controller.user.UserController.getUserByPage(UserController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+"2025-02-19 22:35:58,015 ERROR [http-nio-8090-exec-9] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]] with root cause
+"org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053)
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412)
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524)
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723)
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1066)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1319)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExpr(HqlSqlBaseWalker.java:1906)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1697)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1865)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderClause(HqlSqlBaseWalker.java:1670)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:680)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:177)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy125.findUserByUserRoleQuery(Unknown Source)
+	at com.ekrem.school_management_system.service.user.UserService.getUserByPage(UserService.java:85)
+	at com.ekrem.school_management_system.controller.user.UserController.getUserByPage(UserController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+"2025-02-19 22:36:06,194 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s924ms140µs900ns).
+""2025-02-19 22:36:07,757 ERROR [http-nio-8090-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]] with root cause
+"org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053)
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412)
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524)
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723)
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1066)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1319)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExpr(HqlSqlBaseWalker.java:1906)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1697)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1865)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderClause(HqlSqlBaseWalker.java:1670)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:680)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:177)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy125.findUserByUserRoleQuery(Unknown Source)
+	at com.ekrem.school_management_system.service.user.UserService.getUserByPage(UserService.java:85)
+	at com.ekrem.school_management_system.controller.user.UserController.getUserByPage(UserController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+"2025-02-19 22:36:10,903 ERROR [http-nio-8090-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]] with root cause
+"org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053)
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412)
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524)
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723)
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1066)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1319)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExpr(HqlSqlBaseWalker.java:1906)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1697)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1865)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderClause(HqlSqlBaseWalker.java:1670)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:680)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:177)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy125.findUserByUserRoleQuery(Unknown Source)
+	at com.ekrem.school_management_system.service.user.UserService.getUserByPage(UserService.java:85)
+	at com.ekrem.school_management_system.controller.user.UserController.getUserByPage(UserController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+"2025-02-19 22:36:19,610 ERROR [http-nio-8090-exec-6] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]:Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]; nested exception is java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User [SELECT u FROM com.ekrem.school_management_system.entity.concretes.user.User u WHERE u.userRole.roleName = :userRole order by u.name asc, u.desc asc]] with root cause
+"org.hibernate.QueryException: could not resolve property: desc of: com.ekrem.school_management_system.entity.concretes.user.User
+	at org.hibernate.persister.entity.AbstractPropertyMapping.propertyException(AbstractPropertyMapping.java:78)
+	at org.hibernate.persister.entity.AbstractPropertyMapping.toType(AbstractPropertyMapping.java:72)
+	at org.hibernate.persister.entity.AbstractEntityPersister.toType(AbstractEntityPersister.java:2053)
+	at org.hibernate.hql.internal.ast.tree.FromElementType.getPropertyType(FromElementType.java:412)
+	at org.hibernate.hql.internal.ast.tree.FromElement.getPropertyType(FromElement.java:524)
+	at org.hibernate.hql.internal.ast.tree.DotNode.getDataType(DotNode.java:723)
+	at org.hibernate.hql.internal.ast.tree.DotNode.prepareLhs(DotNode.java:268)
+	at org.hibernate.hql.internal.ast.tree.DotNode.resolve(DotNode.java:208)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.resolve(HqlSqlWalker.java:1066)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.expr(HqlSqlBaseWalker.java:1319)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExpr(HqlSqlBaseWalker.java:1906)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1697)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderExprs(HqlSqlBaseWalker.java:1865)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.orderClause(HqlSqlBaseWalker.java:1670)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:680)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:339)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:287)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:276)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:362)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy3/jdk.proxy3.$Proxy116.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.createJpaQuery(AbstractStringBasedJpaQuery.java:157)
+	at org.springframework.data.jpa.repository.query.AbstractStringBasedJpaQuery.doCreateQuery(AbstractStringBasedJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:233)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$PagedExecution.doExecute(JpaQueryExecution.java:177)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:160)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy125.findUserByUserRoleQuery(Unknown Source)
+	at com.ekrem.school_management_system.service.user.UserService.getUserByPage(UserService.java:85)
+	at com.ekrem.school_management_system.controller.user.UserController.getUserByPage(UserController.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+"2025-02-19 22:37:01,073 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 22:37:01,074 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 22:37:01,077 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+""2025-02-19 22:37:51,794 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Starting SchoolManagementSystemApplication using Java 17.0.14 on By_Ekrem with PID 35672 (D:\B293\BackendProject\school_management_system\target\classes started by ekrem in D:\B293\BackendProject\school_management_system)
+""2025-02-19 22:37:51,795 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:No active profile set, falling back to 1 default profile: "default"
+""2025-02-19 22:37:51,821 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2025-02-19 22:37:51,821 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2025-02-19 22:37:52,096 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2025-02-19 22:37:52,122 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+""2025-02-19 22:37:52,371 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port(s): 8090 (http)
+""2025-02-19 22:37:52,371 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+""2025-02-19 22:37:52,371 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+""2025-02-19 22:37:52,372 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+""2025-02-19 22:37:52,374 INFO  [restartedMain] org.apache.catalina.core.AprLifecycleListener:OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+""2025-02-19 22:37:52,378 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+""2025-02-19 22:37:52,378 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/9.0.68]
+""2025-02-19 22:37:52,406 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+""2025-02-19 22:37:52,406 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 584 ms
+""2025-02-19 22:37:52,459 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+""2025-02-19 22:37:52,476 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 5.6.12.Final
+""2025-02-19 22:37:52,534 INFO  [restartedMain] org.hibernate.annotations.common.Version:HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""2025-02-19 22:37:52,569 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+""2025-02-19 22:37:52,680 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+""2025-02-19 22:37:52,687 INFO  [restartedMain] org.hibernate.dialect.Dialect:HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+""2025-02-19 22:37:53,082 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2025-02-19 22:37:53,086 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 22:37:53,440 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+""2025-02-19 22:37:53,457 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port(s): 8090 (http) with context path ''
+""2025-02-19 22:37:53,462 INFO  [restartedMain] com.ekrem.school_management_system.SchoolManagementSystemApplication:Started SchoolManagementSystemApplication in 1.85 seconds (JVM running for 2.139)
+""2025-02-19 22:39:29,389 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+""2025-02-19 22:39:29,393 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+""2025-02-19 22:39:29,397 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
 "
