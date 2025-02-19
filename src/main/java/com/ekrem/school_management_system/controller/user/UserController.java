@@ -1,6 +1,7 @@
 package com.ekrem.school_management_system.controller.user;
 
 import com.ekrem.school_management_system.payload.request.user.UserRequest;
+import com.ekrem.school_management_system.payload.request.user.UserRequestWithoutPassword;
 import com.ekrem.school_management_system.payload.response.abstracts.BaseUserResponse;
 import com.ekrem.school_management_system.payload.response.business.ResponseMessage;
 import com.ekrem.school_management_system.payload.response.user.UserResponse;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 @RestController
@@ -53,4 +55,24 @@ public class UserController {
         return ResponseEntity.ok(userService.deleteUserById(userId));
 
     }
+    //http://localhost:8090/user/update/1
+    @PostMapping("/update/{userId}")
+    public ResponseMessage<UserResponse>updateByUserId(
+            @RequestBody @ Valid UserRequest userRequest,
+            @PathVariable Long userId){
+        return userService.updateByUserId(userRequest,userId);
+    }
+
+    //http://localhost:8090/user/updateLoggedInUser
+    @PatchMapping("/updateLoggedInUser")
+    public ResponseEntity<String>updateLoggedInUser(
+            @RequestBody @Valid UserRequestWithoutPassword userRequestWithoutPassword){
+        HttpServletRequest httpServletRequest){
+    return ResponseEntity.ok(userService.updateLoggedInUser(
+            userRequestWithoutPassword,httpServletRequest));
+        }
+
+    }
+    )
+
 }

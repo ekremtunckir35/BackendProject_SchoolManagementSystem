@@ -4,6 +4,7 @@ import com.ekrem.school_management_system.entity.concretes.user.User;
 import com.ekrem.school_management_system.payload.mappers.UserMapper;
 import com.ekrem.school_management_system.payload.messages.SuccessMessages;
 import com.ekrem.school_management_system.payload.request.user.UserRequest;
+import com.ekrem.school_management_system.payload.request.user.UserRequestWithoutPassword;
 import com.ekrem.school_management_system.payload.response.abstracts.BaseUserResponse;
 import com.ekrem.school_management_system.payload.response.business.ResponseMessage;
 import com.ekrem.school_management_system.payload.response.user.UserResponse;
@@ -17,6 +18,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.util.stream.Collectors;
 
 @Service
@@ -84,6 +87,56 @@ public class UserService {
 
         return userRepository.findUserByUserRoleQuery(userRole, pageable)
                 .map(userMapper::mapUserToUserResponse);
+
+    }
+
+    public ResponseMessage<UserResponse> updateByUserId( UserRequest userRequest, Long userId) {
+        //validate if user exsist in DB
+
+        User  userFromDb= methodHelper.isUserExist(userId);
+
+        //build  in users can not be updated
+
+        methodHelper.checkBuildIn(userFromDb);
+
+        //validate unique properties
+        uniquePropertyValidator.checkUniqueProperty(userFromDb, userRequest);
+
+        //DTO-->entity mapping
+        User userToSave =userMapper.mapUserRequestToUser(
+                userRequest, userFromDb.getUserRole().getRoleName());
+        userToSave.setId(userId);
+        User savedUser = userRepository.save(userToSave);
+        return ResponseMessage.<UserResponse>builder()
+                .message(SuccessMessages.USER_UPDATE)
+                .returnBody(userMapper.mapUserToUserResponse(savedUser))
+                .httpStatus(HttpStatus.OK)
+                .build();
+
+
+
+    }
+
+
+    public String updateLoggedInUser(@Valid UserRequestWithoutPassword userRequestWithoutPassword,
+                                     HttpServletRequest httpServletRequest) {
+        String username = (String)httpServletRequest.getAttribute("username");
+        User user = userRepository.findByUsername(username);
+        methodHelper.checkBuildIn(user);
+        uniquePropertyValidator.checkUniqueProperty(user, userRequestWithoutPassword);
+        user.setName(userRequestWithoutPassword.getName());
+        user.setSsn(userRequestWithoutPassword.getSsn());
+        user.setSurname(userRequestWithoutPassword.getSurname());
+        user.setUsername(userRequestWithoutPassword.getUsername());
+        user.setBirthday(userRequestWithoutPassword.getBirthDay());
+        user.setBirthplace(userRequestWithoutPassword.getBirthPlace());
+        user.setPhoneNumber(userRequestWithoutPassword.getPhoneNumber());
+        user.setEmail(userRequestWithoutPassword.getEmail());
+        user.setGender(userRequestWithoutPassword.getGender());
+        userRepository.save(user);
+        return SuccessMessages.USER_UPDATE;
+
+
 
     }
 }

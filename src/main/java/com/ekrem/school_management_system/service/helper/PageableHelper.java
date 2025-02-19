@@ -11,6 +11,6 @@ public class PageableHelper {
 
     public Pageable getPageable(int page, int size, String sort, String type) {
 
-        return PageRequest.of( page, size, Sort.by(sort,type));
+        return PageRequest.of( page, size, Sort.by(Sort.Direction.fromString(type), sort));
     }
 }
