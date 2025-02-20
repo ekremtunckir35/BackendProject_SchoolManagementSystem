@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public class LoginRequest {
 
+
     @NotNull(message = "Username cannot be null")
     private String username;
 

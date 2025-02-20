@@ -66,13 +66,13 @@ public class UserController {
     //http://localhost:8090/user/updateLoggedInUser
     @PatchMapping("/updateLoggedInUser")
     public ResponseEntity<String>updateLoggedInUser(
-            @RequestBody @Valid UserRequestWithoutPassword userRequestWithoutPassword){
+            @RequestBody @Valid UserRequestWithoutPassword userRequestWithoutPassword,
         HttpServletRequest httpServletRequest){
     return ResponseEntity.ok(userService.updateLoggedInUser(
             userRequestWithoutPassword,httpServletRequest));
         }
 
     }
-    )
 
-}
+
+

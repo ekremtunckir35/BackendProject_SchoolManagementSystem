@@ -9,6 +9,7 @@ import com.ekrem.school_management_system.payload.response.user.UserResponse;
 import com.ekrem.school_management_system.service.user.UserRoleService;
 import lombok.RequiredArgsConstructor;
 //
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
@@ -19,7 +20,7 @@ public class UserMapper {
 
     private final UserRoleService userRoleService;
 
-    //private final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     /**
      *
@@ -32,7 +33,7 @@ public class UserMapper {
                 .username(userRequest.getUsername())
                 .name(userRequest.getName())
                 .surname(userRequest.getSurname())
-                //.password(passwordEncoder.encode(userRequest.getPassword()))
+                .password(passwordEncoder.encode(userRequest.getPassword()))
                 .ssn(userRequest.getSsn())
                 .birthday(userRequest.getBirthDay())
                 .birthplace(userRequest.getBirthPlace())
