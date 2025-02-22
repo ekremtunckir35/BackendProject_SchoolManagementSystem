@@ -2,9 +2,10 @@ package com.ekrem.school_management_system.payload.messages;
 
 public class ErrorMessages {
 
-    private ErrorMessages(){
-
+    private ErrorMessages() {
     }
+
+
     //user
     public static final String NOT_HAVE_EXPECTED_ROLE_USER = "Error: User does not have expected role";
     public static final String NOT_FOUND_USER_MESSAGE = "Error: User not found with id %s";

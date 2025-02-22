@@ -7,7 +7,7 @@ import com.ekrem.school_management_system.payload.request.user.UserRequest;
 import com.ekrem.school_management_system.repository.user.UserRoleRepository;
 import com.ekrem.school_management_system.service.user.UserRoleService;
 import com.ekrem.school_management_system.service.user.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

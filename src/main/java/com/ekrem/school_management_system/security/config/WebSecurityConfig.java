@@ -51,7 +51,7 @@ public class WebSecurityConfig {
         http.headers().frameOptions().sameOrigin();
         //configure authentication provider
         http.authenticationProvider(authenticationProvider());
-        //configure JWT token handler
+        //configure JWT token hanler
         http.addFilterBefore(authenticationJwtTokenFilter(),
                 UsernamePasswordAuthenticationFilter.class);
         return http.build();
@@ -67,13 +67,14 @@ public class WebSecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-
         return new BCryptPasswordEncoder();
     }
 
 
+
+
     @Bean
-    public AuthTokenFilter authenticationJwtTokenFilter() {
+    public AuthTokenFilter authenticationJwtTokenFilter(){
         return new AuthTokenFilter();
     }
 
@@ -82,6 +83,7 @@ public class WebSecurityConfig {
             throws Exception {
         return configuration.getAuthenticationManager();
     }
+
 
 
     @Bean
@@ -111,6 +113,7 @@ public class WebSecurityConfig {
             "/contactMessages/save",
             "/auth/login"
     };
+
 
 
 }
