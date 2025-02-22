@@ -1,9 +1,8 @@
 package com.ekrem.school_management_system.service.businnes;
 
 import com.ekrem.school_management_system.entity.concretes.businnes.Lesson;
-import com.ekrem.school_management_system.entity.exception.ConflictException;
-import com.ekrem.school_management_system.entity.exception.ResourceNotFoundException;
-import com.ekrem.school_management_system.exception.ConflictException;
+
+import com.ekrem.school_management_system.exception.ResourceNotFoundException;
 import com.ekrem.school_management_system.payload.mappers.LessonMapper;
 import com.ekrem.school_management_system.payload.messages.ErrorMessages;
 import com.ekrem.school_management_system.payload.messages.SuccessMessages;
@@ -12,13 +11,14 @@ import com.ekrem.school_management_system.payload.response.business.LessonRespon
 import com.ekrem.school_management_system.payload.response.business.ResponseMessage;
 import com.ekrem.school_management_system.repository.businnes.LessonRepository;
 import com.ekrem.school_management_system.service.helper.PageableHelper;
-import com.ekrem.school_management_system.util.PageableHelper;
+
 import java.util.List;
-import java.util.Set;
+
 import java.util.stream.Collectors;
 import javax.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.LifecycleState;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -73,7 +73,7 @@ public class LessonService {
 
     private Lesson getLessonByName(String lessonName) {
         return lessonRepository.findByLessonNameEqualsIgnoreCase(lessonName)
-                .orElseThrow(() -> new ResourceNotFoundException(
+                .orElseThrow(() -> new com.ekrem.school_management_system.exception.ResourceNotFoundException(
                         String.format(ErrorMessages.NOT_FOUND_LESSON_IN_LIST, lessonName)));
     }
 
@@ -94,15 +94,18 @@ public class LessonService {
 
     public Lesson isLessonExistById(Long lessonId) {
         return lessonRepository.findById(lessonId)
-                .orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessages.NOT_FOUND_LESSON_MESSAGE, lessonId)));
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        String.format(ErrorMessages.NOT_FOUND_LESSON_MESSAGE, lessonId)));
     }
 
 
     public LessonResponse updateLesson(@Valid LessonRequest lessonRequest, Long lessonId) {
         //validate if exist
         Lesson lessonFromDb = isLessonExistById(lessonId);
+
         //check if user changes the name
-        if(!lessonRequest.getLessonName().equals(lessonFromDb.getLessonName())) {
+        if (!lessonRequest.getLessonName().equals(lessonFromDb.getLessonName())) {
+
             //then check DB in case of conflict
             isLessonExistByName(lessonRequest.getLessonName());
         }
