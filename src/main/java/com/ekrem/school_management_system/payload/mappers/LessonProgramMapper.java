@@ -7,14 +7,15 @@ import com.ekrem.school_management_system.payload.request.business.LessonProgram
 import com.ekrem.school_management_system.payload.response.business.LessonProgramResponse;
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
+import java.util.List;
+
 
 @Component
 public class LessonProgramMapper {
 
     public LessonProgram mapLessonProgramRequestToLessonProgram(
             LessonProgramRequest lessonProgramRequest,
-            Set<Lesson> lessonSet,
+            List<Lesson> lessonSet,
             EducationTerm educationTerm) {
         return LessonProgram.builder()
                 .day(lessonProgramRequest.getDay())
